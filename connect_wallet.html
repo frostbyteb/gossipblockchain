@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="button-container mt-3 d-none" id="profile-button-container">
                                     <button id="profile-button" type="button" class="btn btn-secondary btn-lg">
-                                        <a href="profile.html" style="color: #000;">Go back to the user profile</a>
+                                        <a href="home.html" style="color: #27be34;">Gib gib gib URAAA!!!!!!!</a>
                                     </button>
                                 </div>
                             </div>
@@ -113,25 +113,38 @@
     </main>
     <script>
         document.getElementById('connect-button').addEventListener('click', event => {
-            let account;
-            let buttonContainer = document.getElementById('button-container');
-            let profileButtonContainer = document.getElementById('profile-button-container');
-            let connectButton = document.getElementById('connect-button');
-            ethereum.request({ method: 'eth_requestAccounts' }).then(accounts => {
-                account = accounts[0];
-                console.log(account);
-                connectButton.textContent = account;
-                connectButton.disabled = true;
-                profileButtonContainer.classList.remove('d-none');
+    // Hark! The Connect Button hath been summoned for a grand quest!
+    let account;
+    // Prepare thyself, for we must locate the Container of Buttons!
+    let buttonContainer = document.getElementById('button-container');
+    // Behold! The Container of Profile Buttons awaiteth!
+    let profileButtonContainer = document.getElementById('profile-button-container');
+    // Ahoy! The Connect Button stands ready to fulfill its destiny!
+    let connectButton = document.getElementById('connect-button');
+    // Thy journey commences with a request for Ethereum accounts!
+    ethereum.request({ method: 'eth_requestAccounts' }).then(accounts => {
+        // Lo and behold! The Ethereum account hath been revealed!
+        account = accounts[0];
+        // Rejoice! The account number shall adorn the Connect Button!
+        console.log("Behold, brave adventurer! Thy account number is: " + account);
+        connectButton.textContent = account;
+        // Alas! The Connect Button must now rest, its task complete!
+        connectButton.disabled = true;
+        // But wait! What's this? The Profile Button Container emerges from the shadows!
+        profileButtonContainer.classList.remove('d-none');
 
-                ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] }).then(result => {
-                    console.log(result);
-                    let wei = parseInt(result, 16);
-                    let balance = wei / (10 ** 18);
-                    console.log(balance + " ETH");
-                });
-            });
+        // Now, let us inquire about the balance of thy Ethereum riches!
+        ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] }).then(result => {
+            // Ah, sweet victory! The balance hath been obtained!
+            console.log("Verily! Thy balance is: " + result);
+            // Fear not, for we shall convert this balance into ETH for easier comprehension!
+            let wei = parseInt(result, 16);
+            let balance = wei / (10 ** 18);
+            console.log("Rejoice, for thou hast " + balance + " ETH in thy coffers!");
         });
+    });
+});
+
     </script>
 </body>
 

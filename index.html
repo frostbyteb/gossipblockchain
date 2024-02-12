@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GossipGirl - Registration</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>🌟 GossipGirl - Secret Registration 🌟</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </head>
 
 <style>
-    body, html {
-        background-color: #000; /* Make site background black */
-        color: #222; /* Adjust text color for visibility against the black background */
+    body,
+    html {
+        background-color: #000;
+        color: #fff;
     }
 
-    .container, .container-fluid {
+    .container,
+    .container-fluid {
         padding-right: 0;
         padding-left: 0;
         margin-right: 0;
         margin-left: 0;
-        max-width: 100%; /* Ensure container is full width */
-        margin-top: 0px; /* Adjust container top margin */
+        max-width: 100%;
+        margin-top: 0px;
         color: #000;
     }
 
     .logo {
-        width: 100%; 
-        height:100%;
+        width: 100%;
+        height: 100%;
     }
 
-    .registration-container, .login-container {
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Adjust box-shadow for visibility */
-        background: #333; /* Dark background for readability */
+    .registration-container,
+    .login-container {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        background: #333;
+        border: 2px solid #c74545; /* Red border */
+        border-radius: 10px; /* Rounded corners */
     }
 
-    /* Additional styling to ensure visibility and aesthetics on a black background */
-    .card, .btn, .form-control {
-        background-color:#222;
+    .card,
+    .btn,
+    .form-control {
+        background-color: #222;
         color: #fff;
+        border: 2px solid #f3df05; /* Yellow border */
+        border-radius: 8px; /* Rounded corners */
     }
 
     a {
-            color: lemonchiffon; /* Link color for visibility against the light button */
-        }
+        color: lemonchiffon;
+    }
 
-    a, a:hover {
+    a,
+    a:hover {
         color: #f3df05;
     }
 </style>
@@ -56,85 +72,71 @@
 <body>
     <section id="title">
         <div class="container">
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">GossipGirl Wiki</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="home.html">Home </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="friends.html">Friends</a>
-                  </li>
-                </ul>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <a href="connect_wallet.html" class="btn btn-secondary" tabindex="-1" role="button" aria="true">Connect to the Wallet</a>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        <a class="navbar-brand" href="#">🌟 GossipGirl Wiki 🌟</a>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="home.html">🏠 Home 🏠</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="profile.html">👤 Profile 👤</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="friends.html">👫 Friends 👫</a>
+                            </li>
+                        </ul>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="connect_wallet.html" class="btn btn-secondary" tabindex="-1" role="button"
+                                aria="true">💰 Connect to the Wallet 💰</a>
+                        </div>
+                    </div>
                 </div>
-                </form>
-              </div>
-            </div>
-          </nav>
+            </nav>
         </div>
-      </section>
-    <header class="bg-black py-3" style="background-color: black;"> <!-- Adjust the header's background too if needed -->
+    </section>
+    <header class="bg-black py-3" style="background-color: black;">
         <div class="container-fluid text-center">
-            <img src="background.jpeg" alt="Logo" class="img-fluid logo">
+            <img src="background.jpeg" alt="🔮 Logo of Destiny 🔮" class="img-fluid logo">
         </div>
     </header>
-    
 
-    <!-- Main content section -->
     <main class="py-5">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <div id="registration-container" class="card registration-container shadow">
-                    <div class="card-body">
-                        <h2 class="card-title text-center mb-4">Create an Account</h2>
-                        <form id="registration-form">
-                            <div class="form-group">
-                                <input type="text" id="username" class="form-control" placeholder="Username"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" id="password" class="form-control" placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn btn-secondary btn-block">Register</button>
-                        </form>
-                        <p class="mt-3">Do you have an account? <a href="#" id="login-link">Login here</a></p>
-                    </div>
-
-                </div>
-                <div id="login-container" class="card login-container shadow" style="display: none;">
-                    <div class="card-body">
-                        <h2 class="card-title text-center mb-4">Log In</h2>
-                        <form id="login-form">
-                            <div class="form-group">
-                                <input type="email" id="login-email" class="form-control" placeholder="Email" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" id="login-password" class="form-control"
-                                    placeholder="Password" required>
-                            </div>
-                            <button type="submit" class="btn btn-secondary btn-block">Login</button>
-                        </form>
-
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div id="registration-container" class="card registration-container shadow">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Create an Account</h2>
+                            <form id="registration-form">
+                                <div class="form-group">
+                                    <input type="text" id="username" class="form-control" placeholder="🦄 Username 🦄"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" id="email" class="form-control" placeholder="📧 Email 📧"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" class="form-control"
+                                        placeholder="🔑 Password 🔑" required>
+                                </div>
+                                <button type="submit" class="btn btn-secondary btn-block">🚀 Register 🚀</button>
+                            </form>
+                            <p class="mt-3">New here? <a href="#" id="register-link">🔐 Register now 🔐</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+
     <script>
         $(document).ready(function () {
             $("#login-link").click(function (event) {
@@ -143,7 +145,6 @@
                 $("#login-container").toggle();
             });
 
-            // Handle registration form submission
             $("#registration-form").submit(function (event) {
                 event.preventDefault();
                 window.location.href = "profile.html";

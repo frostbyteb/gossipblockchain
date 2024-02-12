@@ -1,94 +1,87 @@
-body {
-    font-family: 'Roboto', sans-serif; /* Modern and clean */
-    margin: 0;
-    padding: 0;
-    background-color: black /* Soft background */
-}
-
-header {
-    background-color: #333; /* Darker shade for contrast */
-    color: #c74545;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.container {
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: #222;
-}
-
-.sidebar, .main-content {
-    background-color: #222;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-}
-
-.sidebar {
-    flex: 1;
-    max-width: 240px; /* Adjusted width */
-}
-
-.main-content {
-    flex: 3;
-    max-width: calc(100% - 260px); /* Responsive adjustment */
-}
-
-.post {
-    background-color: #fafafa; /* Lighter background for posts */
-    margin-bottom: 20px;
-    border: none; /* Removed border */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* Subtle shadow */
-}
-
-.post-title {
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.post-content {
-    font-size: 14px;
-    color: #666; /* Softer color for text */
-}
-
-.post-actions {
-    display: flex;
-    justify-content: flex-end; /* Align actions to the right */
-}
-
+/* Behold the majestic button, adorned in the hue of Peru, a color as ancient as the sands of time */
 button {
-    background-color:peru; /* Consistent button color */
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 15px;
-    cursor: pointer;
-    margin-left: 5px; /* Space between buttons */
+    background-color: peru; /* A consistent color to paint our buttons */
+    color: #ffffff; /* A touch of light to contrast against the dark background */
+    border: none; /* The borders shall be vanquished */
+    border-radius: 4px; /* Gentle curves to soften the edges */
+    padding: 8px 15px; /* A comfortable cushion for weary fingers */
+    cursor: pointer; /* A magical cursor that beckons users to click */
+    margin-left: 5px; /* Space between buttons, for they must not be crowded */
 }
 
+/* Ah, the hover effect! A whisper of opacity to tease the senses */
 button:hover {
-    opacity: 0.9; /* Slight hover effect */
+    opacity: 0.9; /* Slight transparency upon the hover, like a fleeting dream */
 }
 
-/* Custom styles for form inputs and other interactive elements */
+/* The forms and text areas, oh how they yearn for styling! */
 input[type="text"], input[type="email"], input[type="password"], textarea {
-    border-radius: 4px;
-    border: 1px solid #612424;
-    padding: 10px;
-    width: 100%; /* Ensure full-width inputs */
-    box-sizing: border-box; /* Include padding and border in element's width */
-    margin-bottom: 15px; /* Increased spacing */
+    border-radius: 4px; /* Smooth edges to delight the eyes */
+    border: 1px solid #612424; /* A border of crimson to guard against chaos */
+    padding: 10px; /* A gentle padding to cradle the input */
+    width: 100%; /* Ensuring their width spans the realm */
+    box-sizing: border-box; /* Let us include padding and border in the element's width */
+    margin-bottom: 15px; /* Increased spacing, for comfort and clarity */
 }
 
-/* Adjustments for responsive design */
-@media (max-width: 768px) {
-    .sidebar, .main-content {
-        max-width: 100%;
-    }
+/* The main content, where tales are spun and adventures begin */
+.main-content {
+    flex: 3; /* A flexible width to adapt to different screen sizes */
+    max-width: calc(100% - 260px); /* Responsive adjustment to maintain balance */
+}
+
+/* Behold, the post, a beacon of storytelling amidst the digital expanse */
+.post {
+    background-color: #fafafa; /* A lighter hue for the canvas of stories */
+    margin-bottom: 20px; /* Space between posts, like chapters in a book */
+    border: none; /* The border is banished, allowing the tale to flow freely */
+    padding: 15px; /* A gentle padding to cradle the post's content */
+    border-radius: 8px; /* Rounded corners, reminiscent of ancient scrolls */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* A subtle shadow to add depth */
+}
+
+/* Ah, the canvas of our digital realm, painted in the darkness of night */
+body {
+    font-family: 'Roboto', sans-serif; /* A modern and clean font to guide our readers */
+    margin: 0; /* Let us begin anew, with a clean slate */
+    padding: 0; /* No distractions shall mar the canvas */
+    background-color: black; /* A soft background, like the velvet of the cosmos */
+}
+
+/* The crown jewel of our page, the header, bathed in the shadows of twilight */
+header {
+    background-color: #333; /* A darker shade, for contrast against the starry night */
+    color: #c74545; /* A hue as vibrant as the dawn's first light */
+    padding: 20px 0; /* A sturdy foundation to support our royal insignia */
+    text-align: center; /* Let all who behold it know its grandeur */
+}
+
+/* The container, a sanctuary for our content, nestled amidst the digital wilderness */
+.container {
+    padding-top: 20px; /* A gentle padding to welcome our visitors */
+    display: flex; /* Let us lay our elements side by side, like companions on a journey */
+    justify-content: center; /* All shall be centered, for balance and harmony */
+    flex-wrap: wrap; /* Should the journey grow long, let us wrap our elements with care */
+    background-color: #222; /* A sturdy backdrop, like the stone walls of a fortress */
+}
+
+/* Behold, the sidebar, a guardian of secrets and keeper of lore */
+.sidebar, .main-content {
+    background-color: #222; /* A shadowed realm, where mysteries lurk and tales unfold */
+    margin: 10px; /* A modest margin, to keep the elements apart */
+    padding: 20px; /* A cushion of comfort for weary travelers */
+    border-radius: 8px; /* Rounded corners, like ancient tomes in a library */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* A soft shadow, to add depth and dimension */
+}
+
+/* The post title, a beacon of hope amidst the darkness */
+.post-title {
+    color: #333; /* A shade of gray, like the whispers of twilight */
+    margin-bottom: 10px; /* Space below the title, for the reader to pause and reflect */
+}
+
+/* The post content, where dreams are woven and destinies forged */
+.post-content {
+    font-size: 14px; /* A font size fit for legends and lore */
+    color: #666; /* A softer hue, like the whispers of a bard's*/
 }
