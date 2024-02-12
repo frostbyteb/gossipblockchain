@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profiles - GossipGirl</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body, html {
+            background-color: #000; /* Make site background black */
+            color: lemonchiffon; /* Adjust text color for visibility against the black background */
+        }
+
+        a {
+            color: lemonchiffon; /* Link color for visibility against the light button */
+        }
+
+        .avatar-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .profile-container {
+            margin-top: 20px;
+            background-color:#000;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(222, 161, 17, 0.887);
+            padding: 20px;
+            color:#fff; /* Ensure text is visible on the white background */
+        }
+        .profile-info {
+            margin-left: 20px;
+        }
+        .nav-pills .nav-link {
+            border-radius: 50px;
+        }
+        #home-tab2.nav-link.active,
+        #home-tab2.nav-link:focus,
+        #home-tab2.nav-link:hover {
+            background-color: peru;
+            color: white;
+            outline: none;
+        }
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background-color: peru;
+            color: #fff;
+        }
+        .golden-caption {
+            color: goldenrod;
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section id="title">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">GossipGirl Wiki</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="home.html">Home </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="friends.html">Friends</a>
+                  </li>
+                </ul>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                  <a href="connect_wallet.html" class="btn btn-secondary" tabindex="-1" role="button" aria="true">Connect to the Wallet</a>
+                </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+    <!-- Header section -->
+    <header class="bg-black py-3" style="background-color: black;">
+        <div class="container-fluid text-center">
+            <img src="background.jpeg" alt="Logo" class="img-fluid logo">
+        </div>
+    </header>
+
+    <!-- Main content section -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Profile section repeated four times for different users -->
+            <div class="row">
+                <!-- Profile 1 -->
+                <div class="col-md-6 profile-container">
+                    <div class="text-center">
+                        <img src="nate.JPG" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Nate Archibald<span class="golden-caption">TOPWEB3 NFT</span></h2>
+                        <h3>nate@gmail.com</h3>
+                        <button type="button" class="btn btn-secondary btn-block mt-3">Send Connection Request</button>
+                    </div>
+                </div>
+                <!-- Profile 2 -->
+                <div class="col-md-6 profile-container">
+                    <div class="text-center">
+                        <img src="blair.JPG" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Blair Waldorf<span class="golden-caption">TOPWEB3 NFT</span></h2>
+
+                        <h3>blair@waldorf.com</h3>
+                        <button type="button" class="btn btn-secondary btn-block mt-3">Send Connection Request</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Profile 3 -->
+                <div class="col-md-6 profile-container">
+                    <div class="text-center">
+                        <img src="chack .JPG" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Chuck Bass<span class="golden-caption"></span></h2>
+                        <h3>chuck@bassindustries.com</h3>
+                        <button type="button" class="btn btn-secondary btn-block mt-3">Send Connection Request</button>
+                    </div>
+                </div>
+                <!-- Profile 4 -->
+                <div class="col-md-6 profile-container">
+                    <div class="text-center">
+                        <img src="serena.JPG" alt="User Avatar" class="avatar-img">
+                    </div>
+                    <div class="profile-info">
+                        <h2>Serena Van Der Woodsen<span class="golden-caption"></span></h2>
+                        <h3>serena@vanderwoodsen.com</h3>
+                        <button type="button" class="btn btn-secondary btn-block mt-3">Send Connection Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>

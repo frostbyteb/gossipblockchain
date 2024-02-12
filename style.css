@@ -1,0 +1,94 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Modern and clean */
+    margin: 0;
+    padding: 0;
+    background-color: black /* Soft background */
+}
+
+header {
+    background-color: #333; /* Darker shade for contrast */
+    color: #c74545;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #222;
+}
+
+.sidebar, .main-content {
+    background-color: #222;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 240px; /* Adjusted width */
+}
+
+.main-content {
+    flex: 3;
+    max-width: calc(100% - 260px); /* Responsive adjustment */
+}
+
+.post {
+    background-color: #fafafa; /* Lighter background for posts */
+    margin-bottom: 20px;
+    border: none; /* Removed border */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* Subtle shadow */
+}
+
+.post-title {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post-content {
+    font-size: 14px;
+    color: #666; /* Softer color for text */
+}
+
+.post-actions {
+    display: flex;
+    justify-content: flex-end; /* Align actions to the right */
+}
+
+button {
+    background-color:peru; /* Consistent button color */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-left: 5px; /* Space between buttons */
+}
+
+button:hover {
+    opacity: 0.9; /* Slight hover effect */
+}
+
+/* Custom styles for form inputs and other interactive elements */
+input[type="text"], input[type="email"], input[type="password"], textarea {
+    border-radius: 4px;
+    border: 1px solid #612424;
+    padding: 10px;
+    width: 100%; /* Ensure full-width inputs */
+    box-sizing: border-box; /* Include padding and border in element's width */
+    margin-bottom: 15px; /* Increased spacing */
+}
+
+/* Adjustments for responsive design */
+@media (max-width: 768px) {
+    .sidebar, .main-content {
+        max-width: 100%;
+    }
+}
