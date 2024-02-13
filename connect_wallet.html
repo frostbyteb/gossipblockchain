@@ -4,104 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connect Wallet = GossipGirl</title>
+    <title>Connect Wallet - GossipGirl</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
-        body, html {
-            background-color: #000; /* Site background black */
-            color: lemonchiffon; /* Text color for visibility */
-            margin: 0;
-            padding: 0;
-            height: 100%;
+        body {
+            background-color: #000; /* Set background color to black */
+            color: lemonchiffon; /* Set text color to lemonchiffon for visibility */
         }
 
-        
+        .navbar {
+            background-color: black; /* Set navbar background color to black */
+        }
 
-        header {
-            background-color: black; /* Ensuring header background is black */
+        .logo {
+            max-width: 150px; /* Set maximum width for logo */
         }
 
         .card {
-            background-color: #000; /* Card background to black */
-            color: lemonchiffon; /* Card text color */
-            border: 1px solid lemonchiffon; /* Optional: if you want a border for the card */
+            background-color: #000; /* Set card background color to black */
+            color: lemonchiffon; /* Set card text color to lemonchiffon */
+            border: 1px solid lemonchiffon; /* Add border to the card */
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Add box shadow to the card */
+            border-radius: 100px;
         }
 
         .btn-warning {
-            color: #000; /* Text color for contrast */
-            background-color: lemonchiffon; /* Button color */
+            color: #000; /* Set button text color */
+            background-color: lemonchiffon; /* Set button background color */
+            border-radius: 100px;
         }
 
         .btn-secondary {
-            background-color: grey; /* Differentiating the secondary button */
-            border-color: grey;
+            background-color: grey; /* Set secondary button background color to grey */
+            border-color: grey; /* Set border color for secondary button */
+            border-radius: 20px;
         }
 
         a {
-            color: lemonchiffon; /* Link color for visibility against the light button */
+            color: lemonchiffon; /* Set link color to lemonchiffon */
         }
 
         button {
-            cursor: pointer;
-            transition: all 0.4s ease;
+            cursor: pointer; /* Set cursor style to pointer for buttons */
+            transition: all 0.4s ease; /* Add transition effect to all button properties */
+            border-radius: 100px;
         }
 
         .button-container {
-            margin-top: 20px;
+            margin-top: 20px; /* Set top margin for button container */
         }
     </style>
 </head>
 
 <body>
-    <section id="title">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">GossipGirl Wiki</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">GossipGirl Wiki</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="home.html">Home </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="profile.html">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="friends.html">Friends</a>
-                </li>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="connect_wallet.html">Connect Wallet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="friends.html">Friends</a>
+                    </li>
                 </ul>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <a href="connect_wallet.html" class="btn btn-secondary" tabindex="-1" role="button" aria="true">Connect to the Wallet</a>
-                </div>
-                </form>
             </div>
-            </div>
-        </nav>
         </div>
-    </section>
+    </nav>
+
     <header class="bg-black py-3">
         <div class="container-fluid text-center">
-            <img src="background.jpeg" alt="Logo" class="img-fluid logo">
+            <img src="background.jpeg" alt="Logo" class="img-fluid">
         </div>
     </header>
+
     <main class="py-5">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card shadow">
                         <div class="card-body">
-                            <h2 class="card-title text-center mb-4">Connect Your Wallet</h2>
+                            <h2 class="card-title text-center mb-4">Connect</h2>
                             <div class="text-center">
                                 <div class="button-container">
-                                    <button id="connect-button" type="button" class="btn btn-warning btn-lg">Click here</button>
+                                    <button id="connect-button" type="button" class="btn btn-warning btn-lg">Here I am</button>
                                 </div>
                                 <div class="button-container mt-3 d-none" id="profile-button-container">
                                     <button id="profile-button" type="button" class="btn btn-secondary btn-lg">
-                                        <a href="home.html" style="color: #27be34;">Gib gib gib URAAA!!!!!!!</a>
+                                        <a href="home.html" style="color: #27be34;">Continue to GossipGirl Wiki</a>
                                     </button>
                                 </div>
                             </div>
@@ -111,41 +114,37 @@
             </div>
         </div>
     </main>
+
     <script>
         document.getElementById('connect-button').addEventListener('click', event => {
-    // Hark! The Connect Button hath been summoned for a grand quest!
-    let account;
-    // Prepare thyself, for we must locate the Container of Buttons!
-    let buttonContainer = document.getElementById('button-container');
-    // Behold! The Container of Profile Buttons awaiteth!
-    let profileButtonContainer = document.getElementById('profile-button-container');
-    // Ahoy! The Connect Button stands ready to fulfill its destiny!
-    let connectButton = document.getElementById('connect-button');
-    // Thy journey commences with a request for Ethereum accounts!
-    ethereum.request({ method: 'eth_requestAccounts' }).then(accounts => {
-        // Lo and behold! The Ethereum account hath been revealed!
-        account = accounts[0];
-        // Rejoice! The account number shall adorn the Connect Button!
-        console.log("Behold, brave adventurer! Thy account number is: " + account);
-        connectButton.textContent = account;
-        // Alas! The Connect Button must now rest, its task complete!
-        connectButton.disabled = true;
-        // But wait! What's this? The Profile Button Container emerges from the shadows!
-        profileButtonContainer.classList.remove('d-none');
-
-        // Now, let us inquire about the balance of thy Ethereum riches!
-        ethereum.request({ method: 'eth_getBalance', params: [account, 'latest'] }).then(result => {
-            // Ah, sweet victory! The balance hath been obtained!
-            console.log("Verily! Thy balance is: " + result);
-            // Fear not, for we shall convert this balance into ETH for easier comprehension!
-            let wei = parseInt(result, 16);
-            let balance = wei / (10 ** 18);
-            console.log("Rejoice, for thou hast " + balance + " ETH in thy coffers!");
+            // Hark! The Connect Button hath been summoned for a grand quest!
+            let account;
+            // Behold! The Connect Button stands ready to fulfill its destiny!
+            let connectButton = document.getElementById('connect-button');
+            // Thy journey commences with a request for Ethereum accounts!
+            ethereum.request({ method: 'eth_requestAccounts' }).then(accounts => {
+                // Lo and behold! The Ethereum account hath been revealed!
+                account = accounts[0];
+                // Rejoice! The account number shall adorn the Connect Button!
+                console.log("Behold, brave adventurer! Thy account number is: " + account);
+                connectButton.textContent = account;
+                // Alas! The Connect Button must now rest, its task complete!
+                connectButton.disabled = true;
+                // But wait! What's this? The Profile Button Container emerges from the shadows!
+                document.getElementById('profile-button-container').classList.remove('d-none');
+            });
         });
-    });
-});
-
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

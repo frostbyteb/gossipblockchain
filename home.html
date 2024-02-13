@@ -101,35 +101,24 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Profile</a>
+                        <a class="nav-link" href="profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Friends</a>
+                        <a class="nav-link" href="friends.html">Friends</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="connect_wallet.html">Connect to the Wallet</a>
+                        
                     </li>
                 </ul>
-                <div class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Connect to the Wallet</button> <!-- Connect Wallet button -->
-                </div>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="main-content">
-                    <form id="post-form">
-                        <div class="form-group">
-                            <textarea class="form-control" id="post-content" rows="6" placeholder="Do you wanna gossip?" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-secondary mb-5">Share Gossip</button> <!-- Share Gossip button -->
-                    </form>
-                    <div class="post-container"></div>
-                </div>
-            </div>
             <div class="col-md-5">
                 <div class="sidebar">
                     <h3>About me</h3>
@@ -142,27 +131,7 @@
         </div>
     </div>
 
-    <script>
-        $(document).ready(function () {
-            // Handle form submission
-            $("#post-form").submit(function (event) {
-                event.preventDefault();
-                var content = $("#post-content").val();
-                var userName = "Fariza Zhartaeva";
-                var postHTML = `
-                    <div class="post">
-                        <div class="post-title">${userName}</div>
-                        <div class="post-content">${content}</div>
-                        <div class="post-actions">
-                            <button class="btn btn-secondary btn-sm"> Regossip </button>
-                            <button class="btn btn-danger btn-sm"> Haram </button>
-                        </div>
-                    </div>`;
-                $(".post-container").append(postHTML);
-                $("#post-content").val("");
-            });
-        });
-    </script>
+
 </body>
 
 </html>

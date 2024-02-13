@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile - GossipGirl</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <style>
         body,
@@ -67,10 +71,15 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item px-5">
-                        <button type="button" id="avatar-upload-btn" class="btn btn-secondary">Upload Profile photo</button>
+                        <input type="file" id="file-upload" onclick="updatePhoto()" accept="image/*" class="btn btn-secondary">
                     </li>
                     <li class="nav-item px-5">
-                        <button type="button" id="connect-wallet-btn" class="btn btn-secondary">Your Wallet?</button>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="connect_wallet.html" class="btn btn-secondary" tabindex="-1" role="button" aria="true">Connect Wallet</a>
+                          </div>
+                    </li>
+                    <li class="nav-item px-5">
+                        <button type="button" id="connect-wallet-btn" class="btn btn-secondary">NFT-s</button>
                     </li>
                 </ul>
             </div>
@@ -80,88 +89,110 @@
     <!-- Main content section -->
     <main class="py-5">
         <div class="container">
-            <div class="row profile-container">
-                <div class="col-md-3 text-center">
-                    <img src="p1.png" alt="User Avatar" class="avatar-img">
-                    <input type="file" accept="image/*" id="avatar-upload" class="d-none">
-                </div>
-                <div class="col-md-9">
+            <div class="col-md-3 text-center">
+            </div>
+            <div class="row profile-container" style="background-image: url('back2.jpeg');">
+                <img id="profile-pic" src="p1.png" style="width: 150px;" alt="Profile Picture">
+            </div>
+            
+            <div class="row profile-container" style="">
+                
+                <div class="col-md-6" >
                     <div class="profile-info">
-                        <h2 class="mb-3">User Profile</h2>
-                        <form id="profile-form">
-                            <div class="form-group">
-                                <label for="first-name">Name</label>
-                                <input type="text" class="form-control" id="first-name" placeholder="Enter your first name">
-                            </div>
-                            <div class="form-group">
-                                <label for="last-name">Surname</label>
-                                <input type="text" class="form-control" id="last-name" placeholder="Enter your last name">
-                            </div>
-                            <div class="form-group">
-                                <label for="address">Contact mail</label>
-                                <input type="text" class="form-control" id="address" placeholder="Enter your address">
-                            </div>
-                            <button type="button" id="save-all-btn" class="btn btn-secondary btn-block">Save All Stuff</button>
-                        </form>
-                        <div id="profile-info-display" style="display: none;">
-                            <p id="saved-first-name"></p>
-                            <p id="saved-last-name"></p>
-                            <p id="saved-address"></p>
+                        <h2 class="mb-6">User Profile</h2>
+                        <div class="form-group">
+                            <label for="first-name">Name</label>
+                            <input type="text" class="form-control" id="first-name" placeholder="Enter your first name">
                         </div>
+                        <div class="form-group">
+                            <label for="last-name">Surname</label>
+                            <input type="text" class="form-control" id="last-name" placeholder="Enter your last name">
+                        </div>
+                        <div class="form-group">
+                            <label for="group">Group</label>
+                            <input type="text" class="form-control" id="group" placeholder="Enter your group">
+                        </div>
+                        <div class="form-group">
+                            <label for="interests">Interests</label>
+                            <select class="form-control" id="interests" multiple>
+                                <option value="music">Music</option>
+                                <option value="movies">Movies</option>
+                                <option value="sport">Sport</option>
+                                <option value="game">Game</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea class="form-control" id="bio" rows="3" placeholder="Write a bio about yourself..."></textarea>
+                        </div>
+                    </form>
+                    <div id="profile-info-display" style="display: none;">
+                        <p id="saved-first-name"></p>
+                        <p id="saved-last-name"></p>
+                        <p id="saved-address"></p>
+                    </div>
                     </div>
                 </div>
+                <div>
+                </div> 
+                <div class="col-md-6" >
+                    <div class="main-content">
+                        <form id="post-form">
+                            <div class="form-group">
+                                <textarea class="form-control" id="post-content" rows="6" placeholder="Do you wanna gossip?" required=""></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-secondary mb-5">Share Gossip</button> <!-- Share Gossip button -->
+                        </form>
+                    </div>
+                </div>    
             </div>
-
-            <div class="row mt-4">
-                <div class="col-md d-flex justify-content-center">
-                    <ul class="nav nav-pills small nav-fill gap-2 p-2" id="pillNav2" role="tablist">
-                        <li class="nav-item text-center flex-grow-1" role="presentation">
-                            <button class="nav-link" id="nft-tab2" data-bs-toggle="tab" type="button" role="tab" onclick="changeColor('nft-tab2')" style="padding: 8px 15px;"> My NFT's </button>
-                        </li>
-                    </ul>
+            <div class="row profile-container" >
+                <div class="main-content">
+                    <div class="post-container"></div>
                 </div>
             </div>
         </div>
     </main>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            // Behold! The Avatar Upload Button cometh!
-            $("#avatar-upload-btn").click(function () {
-                // Unleash the hidden powers of the Avatar Upload upon click!
-                $("#avatar-upload").click();
-            });
-
-            // Hear ye! The Save All Button hath been summoned!
-            $("#save-all-btn").click(function () {
-                // Gather thy inputs for saving, brave soul!
-                var firstName = $("#first-name").val();
-                var lastName = $("#last-name").val();
-                var address = $("#address").val();
-                // Behold! The information shalt be saved!
-                $("#saved-first-name").text("First Name: " + firstName);
-                $("#saved-last-name").text("Last Name: " + lastName);
-                $("#saved-address").text("Contact Address: " + address);
-                // Vanquish the form, reveal the saved details!
-                $("#profile-form").hide();
-                $("#profile-info-display").show();
-            });
-
-            // Attention, noble traveler! The Connect Wallet Button beckons!
-            $("#connect-wallet-btn").click(function () {
-                // Embark on a journey to the Wallet Connection Realm!
-                window.location.href = "connect_wallet.html";
-            });
-
-            // Witness the change of colors upon the click of buttons!
-            function changeColor(buttonId) {
-                // Behold! The colors shall shift as commanded!
-                $(".nav-link").removeClass("active");
-                $("#" + buttonId).addClass("active");
+            function updatePhoto() {
+                const fileInput = document.getElementById('profile-pic');
+                const photo = document.getElementById('profile-pic');
+                const file = fileInput.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        photo.src = event.target.result;
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please select a file.');
+                }
             }
+            // Handle form submission
+            $("#avatar-upload-btn").click(function () {
+            $("#avatar-upload").click();
+             });
+            $("#post-form").submit(function (event) {
+                event.preventDefault();
+                var content = $("#post-content").val();
+                var userName = "Fariza Zhartaeva";
+                var postHTML = `
+                    <div class="post my-2 mx-2">
+                        <div class="post-title">${userName}</div>
+                        <div class="post-content">${content}</div>
+                        <div class="post-actions">
+                            <button class="btn btn-secondary btn-sm"> Regossip </button>
+                            <button class="btn btn-danger btn-sm"> Haram </button>
+                        </div>
+                    </div>`;
+                $(".post-container").append(postHTML);
+                $("#post-content").val("");
+            });
         });
-
     </script>
+    
 </body>
 
 </html>
